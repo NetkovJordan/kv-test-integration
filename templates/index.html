@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Professional Flask App{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center py-5" data-aos="fade-in">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4" data-aos="zoom-in">Welcome to My Professional Flask App</h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Experience a beautifully designed web application with smooth animations and modern UI.</p>
+        <a class="btn btn-primary btn-lg me-3" href="/about" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-info-circle me-2"></i>Learn More
+        </a>
+        <a class="btn btn-outline-light btn-lg" href="/contact" data-aos="fade-up" data-aos-delay="600">
+            <i class="fas fa-envelope me-2"></i>Get in Touch
+        </a>
+    </div>
+</section>
+
+<section class="features-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Our Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-right">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Fast Performance</h5>
+                        <p class="card-text">Built with Flask for lightning-fast web applications that scale effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-palette fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Beautiful Design</h5>
+                        <p class="card-text">Modern UI with professional animations and responsive design for all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-left" data-aos-delay="400">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Secure & Reliable</h5>
+                        <p class="card-text">Built with security best practices and reliable Flask framework.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section bg-gradient-primary text-white py-5" data-aos="fade-in">
+    <div class="container text-center">
+        <h2 class="mb-4" data-aos="zoom-in">Ready to Get Started?</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Explore our app and discover what makes it special.</p>
+        <a class="btn btn-light btn-lg" href="/about" data-aos="bounce-in" data-aos-delay="400">
+            <i class="fas fa-arrow-right me-2"></i>Explore Now
+        </a>
+    </div>
+</section>
+{% endblock %}

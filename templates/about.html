@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}About - My Professional Flask App{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">About Our App</h1>
+                <p class="lead mb-4">This is a professional Flask web application designed with modern UI principles and smooth animations. Built to showcase the power of Python web development with a focus on user experience.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-check-circle text-success me-2"></i>Responsive design for all devices
+                    </li>
+                    <li class="mb-2" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-check-circle text-success me-2"></i>Smooth animations and transitions
+                    </li>
+                    <li class="mb-2" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-check-circle text-success me-2"></i>Modern Bootstrap framework
+                    </li>
+                    <li class="mb-2" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-check-circle text-success me-2"></i>Professional color schemes
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Technology" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Why Choose Us?</h2>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-code fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">Clean Code</h5>
+                        <p class="card-text">Written with best practices in mind, ensuring maintainability and scalability.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users fa-2x text-success mb-3"></i>
+                        <h5 class="card-title">User Focused</h5>
+                        <p class="card-text">Designed with users in mind, providing an intuitive and engaging experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
