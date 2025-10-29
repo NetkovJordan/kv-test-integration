@@ -1,0 +1,34 @@
+# Build pipeline for generating artifact for release
+
+trigger:
+- master 
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+# 1. Install Python
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.12'  #
+  displayName: 'Use Python 3.12'
+
+# 2. Upgrade pip and install dependencies
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+# 3. Prepare artifact
+- script: |
+    mkdir -p $(Build.ArtifactStagingDirectory)
+    cp -r * $(Build.ArtifactStagingDirectory)
+  displayName: 'Prepare artifact'
+
+# 4. Publish artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'  # this will be the artifact your release pipeline uses
+    publishLocation: 'Container'
+  displayName: 'Publish artifact'
