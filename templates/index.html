@@ -7,6 +7,11 @@
     <div class="container">
         <h1 class="display-4 fw-bold mb-4" data-aos="zoom-in">Welcome to My Professional Flask App</h1>
         <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Experience a beautifully designed web application with smooth animations and modern UI.</p>
+        <div class="alert alert-info mb-4" data-aos="fade-up" data-aos-delay="300">
+            <strong>Environment Flag:</strong> {{ app_flag }} |
+            <strong>Secret Word:</strong> {{ secret_word }} |
+            <strong>Theme Color:</strong> <span style="color: {{ app_color }}; font-weight: bold;">{{ app_color }}</span>
+        </div>
         <a class="btn btn-primary btn-lg me-3" href="/about" data-aos="fade-up" data-aos-delay="400">
             <i class="fas fa-info-circle me-2"></i>Learn More
         </a>
